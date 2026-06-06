@@ -24,8 +24,9 @@ jobs:
     - name: Build with Buildozer
       run: |
         export PATH=$PATH:~/.local/bin
-        buildozer android debug
-
+        # دا لاندې کوډ د انډرایډ لایسنسونه په اتومات ډول قبولوي
+        yes | buildozer android debug
+        
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
